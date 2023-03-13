@@ -12,7 +12,6 @@ var length = window.prompt("Please answer the following questions to generate yo
       window.prompt("Your password must be between 8 and 128 characters. Please try again.");
     passwordGen();
   }
-console.log(length);
 
 //ask user if lowercase characters are accepted
   var lowercase = window.prompt("Would you like to include lowercase character?\nEnter Y or N.");
@@ -28,7 +27,6 @@ console.log(length);
 //add lowercase characters to randomArray
     var RandomArray = acceptedLowercase;
     }
-console.log(RandomArray);
 
 //Ask user if uppercase is accepted
   var uppercase = window.prompt("Would you like to include uppercase character?\nEnter Y or N.");
@@ -46,7 +44,6 @@ console.log(RandomArray);
       RandomArray.push(i);
     }
   }
-console.log(RandomArray);
 
 //Ask user if numbers are accepted
   var numbers = window.prompt("Would you like to include numbers in your password?\nEnter Y or N.");
@@ -65,7 +62,6 @@ console.log(RandomArray);
       RandomArray.push(i);
     }
   }
-console.log(RandomArray);
 
 //ask user if special characters are accepted
   var specialChar = window.prompt("Would you like to include special characters in your password?\nEnter Y or N.");
@@ -84,7 +80,6 @@ console.log(RandomArray);
       RandomArray.push(i);
     }
   }
-console.log(RandomArray);
 
 //User must select at least one character type
   if (lowercase === "N" && uppercase === "N" && numbers === "N" && specialChar === "N") {
@@ -95,10 +90,8 @@ console.log(RandomArray);
     var randomChars = '';
     for (let i = 0; i < length; i++) {
       randomChars += RandomArray[Math.floor(Math.random() * RandomArray.length)];
-console.log(randomChars);
+// console.log(randomChars);
       var password = randomChars;
-      console.log(password);
-
     }
   }
 
