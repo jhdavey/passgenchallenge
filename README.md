@@ -8,7 +8,7 @@ A simple javascript password generator with prompts.
 
 Your page should be displayed as follows:
 
-![Password generator Webpage Screenshot](/passgenscreenshot.png)
+[Password generator Webpage Screenshot](/passgenscreenshot.png)
 ## Description
 
 This is a simple password generator. Start by going through the prompts to decide the length of your password. Then decide if you would like to include lowercase, uppercase, numbers, or special characters. Once you're done going through the prompts, press "Generate Password".

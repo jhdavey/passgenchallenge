@@ -40,6 +40,7 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  text-align: center;
 }
 
 .card-header::after {
@@ -50,15 +51,23 @@ header {
   height: 2px;
 }
 
-.card-body {
-  min-height: 100px;
+#character-options {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 350px 100px;
+  grid-gap: 10px;
+  margin-bottom: 20px;
 }
 
-.card-footer {
+label {
+  grid-column: 1/2;
+}
+
+.genbutton {
   text-align: center;
 }
 
-.card-footer::before {
+.genbutton::before {
   content: " ";
   display: block;
   width: 100%;
@@ -66,7 +75,7 @@ header {
   height: 2px;
 }
 
-.card-footer::after {
+.getbutton::after {
   content: " ";
   display: block;
   clear: both;
