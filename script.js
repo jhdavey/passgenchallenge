@@ -17,6 +17,8 @@ var specialInput = document.getElementById('special-check');
 // Add event listener to generate button
   generateBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    //Remove initial rendered password from UI
+    generatePassword.innerHTML = "";
     lengthCheck();
     generateBtn.hidden = true;
   });
@@ -52,7 +54,7 @@ function upperCheck() {
   if (uppercase.checked) {
     var acceptedUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R","S", "T", "U", "V", "W", "X", "Y", "Z"];
     //add uppercase characters to randomArray
-      RandomArray.push(acceptedUppercase);
+    RandomArray = RandomArray.concat(acceptedUppercase);
     numberCheck();
   } else {
     numberCheck();
@@ -65,7 +67,7 @@ function numberCheck() {
   if (numbers.checked) {
     var acceptedNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     //add numbers to randomArray
-      RandomArray.push(acceptedNumbers);
+    RandomArray = RandomArray.concat(acceptedNumbers);
     specialCheck();
   } else {
     specialCheck();
@@ -78,7 +80,7 @@ function specialCheck() {
 if (specialChar.checked) {
     var acceptedSpecialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", "/", ":", ";", "<", "=", ">", "?", "@", "_", "~"];
     //add special characters to randomArray
-      RandomArray.push(acceptedSpecialChar);
+    RandomArray = RandomArray.concat(acceptedSpecialChar);
     lastCheck();
   } else {
     lastCheck();
